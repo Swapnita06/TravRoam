@@ -6,6 +6,7 @@ import About from './pages/About';
 import Tour from './pages/Tour';
 import './App.css';
 
+
 const App = () => {
   return (
     <div>
@@ -14,7 +15,8 @@ const App = () => {
       <Routes>
       <Route path="/home" element={<Home/>} />
       <Route path='/about' element={<About/>}/>
-      <Route path='/tour' element={< Tour/>}/>
+      <Route path='/tour' element={< Tour/>}/> 
+      
       </Routes>
       </BrowserRouter>
       
