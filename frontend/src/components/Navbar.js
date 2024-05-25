@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className='nav' >
         <nav className='nav-container'>
             <div>
-                <h1>TRAVROAM</h1>
+                <h1 style={{color:"whitesmoke"}}>TRAVROAM</h1>
             </div>
             <div className='nav-links'>
             <ul className={`menu ${isOpen ? 'open' : ''}`}>
