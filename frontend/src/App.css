@@ -1,3 +1,20 @@
+
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 1000;
+}
+
 .menu{
     display: flex;
     gap: 10rem;
@@ -14,6 +31,9 @@
   align-items: center;
   padding: 0 20px;
   background-color: black;
+  padding: 20px;
+ 
+  
 }
 
 .nav-links{
@@ -39,6 +59,7 @@
     display: none;
     font-size: 2rem;
     cursor: pointer;
+    color: whitesmoke;
   }
   
   @media (max-width: 768px) {
@@ -46,12 +67,14 @@
       display: none;
       flex-direction: column;
       position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: white;
+      top: 80px;
+      right: 1px;
+  background-color: rgba(1, 1, 1, 0.783); /* Semi-transparent black background */
+  backdrop-filter: blur(10rem); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(10px);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
-      gap: 1rem;
+      padding: 5rem;
+      gap: 4rem;
     }
   
     .menu.open {
