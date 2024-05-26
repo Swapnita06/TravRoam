@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Tour from './pages/Tour';
+import Bucketlist from './pages/Bucketlist'
 import './App.css';
 
 
@@ -16,7 +17,7 @@ const App = () => {
       <Route path="/" element={<Home/>} />
       <Route path='/about' element={<About/>}/>
       <Route path='/tour' element={< Tour/>}/> 
-      
+      <Route path='/bucket' element={<Bucketlist/>}/>
       </Routes>
       </BrowserRouter>
       
