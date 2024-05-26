@@ -7,6 +7,7 @@ const Bucketlist = () => {
   const [note,setNote] = useState("");
   const [data, setData] = useState([]); 
   const [editingTaskId, setEditingTaskId] = useState(null);
+  const [searchQuery, setSearchQuery] = useState(""); // State for the search query
 
   const addData = async(e)=>{
     e.preventDefault();
@@ -72,6 +73,10 @@ const fetchData = async ()=>{
   
   }
 
+  const filteredData = data.filter(task => 
+    task.task.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
 
   return (
     <div>
@@ -92,9 +97,19 @@ const fetchData = async ()=>{
       ) : (  
      <button onClick={addData}  className='button' type="button">Submit</button>
     )}
+
+<h1 style={{ textAlign: 'center' }}>Search Tasks</h1>
+      <input
+        className="inputbox"
+        type="text"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        placeholder="Search tasks"
+      />
+
      <h1 style={{ textAlign: 'center' }}>Display Data</h1>
       <ul>
-        {data.map(task => (
+        {filteredData.map(task => (
           <li key={task._id}>
             Task: {task.task}, Note: {task.note}
             
@@ -103,10 +118,6 @@ const fetchData = async ()=>{
           </li>
         ))}
       </ul>
-
-           
-    
-    
      </div>
   )
 }
