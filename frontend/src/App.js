@@ -6,6 +6,7 @@ import About from './pages/About';
 import Tour from './pages/Tour';
 import Bucketlist from './pages/Bucketlist'
 import './App.css';
+import Admin from './components/Admin'
 
 
 const App = () => {
@@ -18,6 +19,9 @@ const App = () => {
       <Route path='/about' element={<About/>}/>
       <Route path='/tour' element={< Tour/>}/> 
       <Route path='/bucket' element={<Bucketlist/>}/>
+      <Route path='/admin' element={<Admin/>}></Route>
+    
+
       </Routes>
       </BrowserRouter>
       
